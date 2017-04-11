@@ -1,0 +1,79 @@
+
+body {
+    font-family: "微软雅黑";
+    font-size: 14px;
+    background: #efefef;
+}
+
+a {
+    text-decoration: none;
+}
+body, h1, h2, h3, h4, h5, h6, hr, p, blockquote, dl, dt, dd, ul, ol, li, pre, form, fieldset, legend, button, input, textarea, th, td {
+    margin: 0;
+    padding: 0;
+}
+
+
+/*主色 # 66CEFF */
+/*附色 # 3289C7 */
+/*未选 # C2ECFF */
+/*边 # EDF9FF */
+
+#loading {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 666;
+    background: #66CEFF;
+}
+
+#loading img {
+    width: 138px;
+    height: 124px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin: -90px 0 0 -69px;
+}
+
+/*轮播*/
+.banner{width: 100%;background: #ffffff;}
+.box_swipe {overflow: hidden; position: relative;}
+.box_swipe ul {overflow: hidden; position: relative;margin:0;padding:0;}
+.box_swipe ul > li {float:left; width:100%; position: relative; text-align:center;}
+.box_swipe ul > li a{color:#FFF; text-decoration:none;}
+.box_swipe ul > li .title{position: absolute; bottom: 0px; display: block; width: 100%; height:20px; padding:0 10px; text-overflow: ellipsis; white-space: nowrap; overflow: hidden; color:#FFF; z-index:100;}
+.box_swipe>ol{height:20px; position: relative; z-index:10; margin-top:-20px; text-align:center;}
+.box_swipe>ol>li{display:inline-block; margin-bottom:1px; width:8px; height:8px; background-color:#C2ECFF; border-radius: 8px;}
+.box_swipe>ol>li.on{background-color:#66CEFF;}
+
+.menu {
+    position: fixed;
+    margin: 0;
+    padding: 0;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    border-top: 1px solid #EDF9FF;
+    background: #ffffff;
+}
+
+.menu a {
+    display: block;
+    width: 25%;
+    text-align: center;
+    float: left;
+    line-height: 40px;
+    color: #C2ECFF;
+}
+
+.menu a.active {
+    color: #66CEFF;
+}
+
+.menu a i.iconfont {
+    font-size: 20px;
+}
+
