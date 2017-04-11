@@ -2,7 +2,7 @@
 body {
     font-family: "微软雅黑";
     font-size: 14px;
-    background: #efefef;
+    background: #f5f5f5;
 }
 
 a {
@@ -12,6 +12,9 @@ body, h1, h2, h3, h4, h5, h6, hr, p, blockquote, dl, dt, dd, ul, ol, li, pre, fo
     margin: 0;
     padding: 0;
 }
+p,span,b{
+    color: #3289C7;
+}
 
 
 /*主色 # 66CEFF */
@@ -19,6 +22,19 @@ body, h1, h2, h3, h4, h5, h6, hr, p, blockquote, dl, dt, dd, ul, ol, li, pre, fo
 /*未选 # C2ECFF */
 /*边 # EDF9FF */
 
+
+.row{
+    width: 100%;
+    margin-top: 5px;
+}
+.title{
+    background: #ffffff;
+    height: 36px;
+    line-height: 36px;
+}
+.title span {
+    margin-left: 10px;
+}
 #loading {
     position: fixed;
     left: 0;
