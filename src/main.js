@@ -1,35 +1,44 @@
 import Vue from 'vue'
 import App from './App.vue'
 import VueRouter from "vue-router";
-import VueResource from 'vue-resource'
+// import VueResource from 'vue-resource'
 // import Element from 'element-ui'
 // import 'element-ui/lib/theme-default/index.css'
+
 //开启debug模式
 Vue.config.debug = true;
 Vue.use(VueRouter);
-Vue.use(VueResource);
+// Vue.use(VueResource);
 // Vue.use(Element);
 
-// 定义组件, 也可以像教程之前教的方法从别的文件引入
-import index from './views/index.vue'
-import list from './views/list.vue'
+import _index from './views/index/index.vue';
+import _list from './views/goods/list.vue';
+import _cart from './views/goods/cart.vue';
+import _goods from './views/goods/goods.vue';
+import _user from './views/user/user.vue';
+
+
+
 const routes = [
-  { path: '/index', component: index },
-  { path: '/list', component: list },
-]
+  { path: '/index', component: _index },
+    { path: '/list', component: _list },
+    { path: '/cart', component: _cart },
+    { path: '/user', component: _user },
+    { path: '/goods', component: _goods },
+];
 
-
-// 创建一个路由器实例
-// 并且配置路由规则
 const router = new VueRouter({
   mode: 'history',
   base: __dirname,
-  routes: routes
-})
+  routes: routes,
+  linkActiveClass: 'active'
+});
 
-// 现在我们可以启动应用了！
-// 路由器会创建一个 App 实例，并且挂载到选择符 #app 匹配的元素上。
+
 const app = new Vue({
       router: router,
       render: h => h(App)
-}).$mount('#app')
+}).$mount('#app');
+
+
+router.push('index');

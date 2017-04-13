@@ -4,6 +4,7 @@ body {
     font-size: 14px;
     background: #f5f5f5;
 }
+
 #app {
     font-family: 'Avenir', Helvetica, Arial, sans-serif;
     -webkit-font-smoothing: antialiased;
@@ -15,33 +16,36 @@ body {
 a {
     text-decoration: none;
 }
+
 body, h1, h2, h3, h4, h5, h6, hr, p, blockquote, dl, dt, dd, ul, ol, li, pre, form, fieldset, legend, button, input, textarea, th, td {
     margin: 0;
     padding: 0;
 }
-p,span,b{
+
+p, span, b {
     color: #3289C7;
 }
-
 
 /*主色 # 66CEFF */
 /*附色 # 3289C7 */
 /*未选 # C2ECFF */
 /*边 # EDF9FF */
 
-
-.row{
+.row {
     width: 100%;
     margin-top: 5px;
 }
-.title{
+
+.title {
     background: #ffffff;
     height: 36px;
     line-height: 36px;
 }
+
 .title span {
     margin-left: 10px;
 }
+
 #loading {
     position: fixed;
     left: 0;
@@ -61,16 +65,71 @@ p,span,b{
     margin: -90px 0 0 -69px;
 }
 
-/*轮播*/
-.banner{width: 100%;background: #ffffff;}
-.box_swipe {overflow: hidden; position: relative;}
-.box_swipe ul {overflow: hidden; position: relative;margin:0;padding:0;}
-.box_swipe ul > li {float:left; width:100%; position: relative; text-align:center;}
-.box_swipe ul > li a{color:#FFF; text-decoration:none;}
-.box_swipe ul > li .title{position: absolute; bottom: 0px; display: block; width: 100%; height:20px; padding:0 10px; text-overflow: ellipsis; white-space: nowrap; overflow: hidden; color:#FFF; z-index:100;}
-.box_swipe>ol{height:20px; position: relative; z-index:10; margin-top:-20px; text-align:center;}
-.box_swipe>ol>li{display:inline-block; margin-bottom:1px; width:8px; height:8px; background-color:#C2ECFF; border-radius: 8px;}
-.box_swipe>ol>li.on{background-color:#66CEFF;}
+/*轮播↓↓↓↓↓↓↓↓*/
+.banner {
+    width: 100%;
+    background: #ffffff;
+}
+
+.box_swipe {
+    overflow: hidden;
+    position: relative;
+}
+
+.box_swipe ul {
+    overflow: hidden;
+    position: relative;
+    margin: 0;
+    padding: 0;
+}
+
+.box_swipe ul > li {
+    float: left;
+    width: 100%;
+    position: relative;
+    text-align: center;
+}
+
+.box_swipe ul > li a {
+    color: #FFF;
+    text-decoration: none;
+}
+
+.box_swipe ul > li .title {
+    position: absolute;
+    bottom: 0px;
+    display: block;
+    width: 100%;
+    height: 20px;
+    padding: 0 10px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    color: #FFF;
+    z-index: 100;
+}
+
+.box_swipe > ol {
+    height: 20px;
+    position: relative;
+    z-index: 10;
+    margin-top: -20px;
+    text-align: center;
+}
+
+.box_swipe > ol > li {
+    display: inline-block;
+    margin-bottom: 1px;
+    width: 8px;
+    height: 8px;
+    background-color: #C2ECFF;
+    border-radius: 8px;
+}
+
+.box_swipe > ol > li.on {
+    background-color: #66CEFF;
+}
+/*轮播↑↑↑↑↑↑↑↑↑↑↑*/
 
 .menu {
     position: fixed;
@@ -100,3 +159,14 @@ p,span,b{
     font-size: 20px;
 }
 
+.hot-list a {
+    display: block;
+    float: left;
+    margin: 2px;
+    text-align: center;
+}
+.hot-list a img{
+    max-width: 100%;
+    min-height: 50px;
+    max-height: 200px;
+}
