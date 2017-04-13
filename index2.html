@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>title</title>
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no"/>
+    <link rel="stylesheet" href="static/iconfont/iconfont.css">
+    <link rel="stylesheet" href="static/css/common.css">
+</head>
+<body>
+<div id="loading" >
+    <img src="static/images/loading.gif">
+</div>
+
+<div class="banner" >
+    <div id="banner_box" class="box_swipe">
+        <ul>
+            <li>
+                <a href="#">
+                    <img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1491822278844&di=0bcbd6e1c06761030cd37915be3a5e13&imgtype=0&src=http%3A%2F%2Fwww.nitutu.com%2Fuploads%2Fallimg%2F160121%2F1122405P1-5.jpg"
+                         style='width:100%;'/>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1491822278844&di=0bcbd6e1c06761030cd37915be3a5e13&imgtype=0&src=http%3A%2F%2Fwww.nitutu.com%2Fuploads%2Fallimg%2F160121%2F1122405P1-5.jpg"
+                         style='width:100%;'/>
+                </a>
+            </li>
+        </ul>
+        <ol>
+            <li class="on"></li>
+            <li></li>
+        </ol>
+    </div>
+</div>
+
+<div class="row title">
+    <span>热门</span>
+</div>
+<div>
+    <img width="100" height="100" data-original="http://img.ui.cn/data/file/9/3/2/948239.png" class="imgLoadingLater" />
+    <img width="100" height="100" data-original="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1491822278844&di=0bcbd6e1c06761030cd37915be3a5e13&imgtype=0&src=http%3A%2F%2Fwww.nitutu.com%2Fuploads%2Fallimg%2F160121%2F1122405P1-5.jpg" class="imgLoadingLater" />
+    <img width="100" height="100" data-original="http://img.ui.cn/data/file/9/3/2/948239.png" class="imgLoadingLater" />
+</div>
+
+<div class="menu">
+    <a href="#" class="active">
+        <i class="iconfont">&#xe6b8;</i>
+    </a>
+    <a href="#">
+        <i class="iconfont">&#xe676;</i>
+    </a>
+    <a href="#">
+        <i class="iconfont">&#xe6af;</i>
+    </a>
+    <a href="#">
+        <i class="iconfont">&#xe78b;</i>
+    </a>
+    <!--<a href="#" class="active">-->
+    <!--<i class="iconfont">&#xe6bb;</i>-->
+    <!--</a>-->
+    <!--<a href="#" class="active">-->
+    <!--<i class="iconfont">&#xe697;</i>-->
+    <!--</a>-->
+    <!--<a href="#" class="active">-->
+    <!--<i class="iconfont">&#xe6b9;</i>-->
+    <!--</a>-->
+    <!--<a href="#" class="active">-->
+    <!--<i class="iconfont">&#xe78c;</i>-->
+    <!--</a>-->
+</div>
+
+</body>
+<script type='text/javascript' src="static/js/jquery.js" charset='utf-8'></script>
+<script type='text/javascript' src="static/js/swipe.js" charset='utf-8'></script>
+<script type='text/javascript' src="static/js/LazyLoad.js" charset='utf-8'></script>
+<script>
+    //公共
+    $(function () {
+
+        $('#loading').fadeOut();
+        $("img.imgLoadingLater").lazyload({
+            threshold :100,
+            effect : "fadeIn"
+        });
+
+    });
+
+    //首页轮播
+    $(function () {
+        new Swipe($('#banner_box')[0], {
+            speed: 500,
+            auto: 3000,
+            callback: function () {
+                var lis = $(this.element).next("ol").children();
+                lis.removeClass("on").eq(this.index).addClass("on");
+            }
+        });
+    });
+</script>
+<!--<script type='text/javascript' src="static/js/vue.js" charset='utf-8'></script>-->
+</html>
