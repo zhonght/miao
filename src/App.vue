@@ -1,31 +1,17 @@
 <template>
     <div id="app">
-        <div id="loading">
-            <img src="./assets/images/loading.gif">
-        </div>
+        <v-loading></v-loading>
         <router-view></router-view>
-        <div style="height: 45px; clear: both;"></div>
-        <div class="menu">
-            <router-link to="/index">
-                <i class="iconfont">&#xe6b8;</i>
-            </router-link>
-            <router-link to="/list">
-                <i class="iconfont">&#xe676;</i>
-            </router-link>
-            <router-link to="/cart">
-                <i class="iconfont">&#xe6af;</i>
-            </router-link>
-            <router-link to="/user">
-                <i class="iconfont">&#xe78b;</i>
-            </router-link>
-        </div>
+        <v-footer></v-footer>
     </div>
 </template>
 <script>
     import  './assets/js/jquery.js';
     import  './assets/js/LazyLoad.js';
-    import  './assets/js/functions.js';
+//    import  './assets/js/functions.js';
 
+    import _footer from './components/footer.vue';
+    import _loading from './components/loading.vue';
 
     export default {
         name: 'app',
@@ -33,11 +19,11 @@
             return {
             }
         },
-        components: {},
+        components: {
+            'v-footer':_footer,
+            'v-loading':_loading
+        },
         created: function () {
-            $(function(){
-                $("#loading").fadeOut();
-            });
         },
         methods:{
         }

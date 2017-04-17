@@ -46,24 +46,6 @@ p, span, b {
     margin-left: 10px;
 }
 
-#loading {
-    position: fixed;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 666;
-    background: #66CEFF;
-}
-
-#loading img {
-    width: 138px;
-    height: 124px;
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    margin: -90px 0 0 -69px;
-}
 
 /*轮播↓↓↓↓↓↓↓↓*/
 .banner {
@@ -157,16 +139,4 @@ p, span, b {
 
 .menu a i.iconfont {
     font-size: 20px;
-}
-
-.hot-list a {
-    display: block;
-    float: left;
-    margin: 2px;
-    text-align: center;
-}
-.hot-list a img{
-    max-width: 100%;
-    min-height: 50px;
-    max-height: 200px;
 }
